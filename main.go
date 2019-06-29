@@ -10,7 +10,7 @@ import (
 	   "strconv"  
 )
 func main(){
-	
+
 	createTable()
 	r := setupRouter()
 	r.Run(":2019")
@@ -41,7 +41,7 @@ func createTable() {
 	if err != nil {
 		log.Fatal("can't create", err.Error())
 	}
-	fmt.Println("Create table success")
+
 }
 
 func getCustomer(c *gin.Context){
@@ -184,7 +184,6 @@ func delCustomer(c *gin.Context){
 
 func authMiddleware(c *gin.Context){
 
-		fmt.Println("Hello from midderware")
 		token := c.GetHeader("Authorization")
 		fmt.Println("Token", token)
   
@@ -194,8 +193,6 @@ func authMiddleware(c *gin.Context){
 			return
 		}
 		c.Next()
-		fmt.Println("Goodbe")
-	 // })
 	
 }
 

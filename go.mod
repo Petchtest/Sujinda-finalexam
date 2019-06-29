@@ -1,4 +1,4 @@
-module github.com/Sujinda/finalexam
+module github.com/Petchtest/finalexam
 
 go 1.12
 

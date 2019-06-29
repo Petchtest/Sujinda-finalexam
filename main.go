@@ -11,8 +11,8 @@ import (
 )
 func main(){
 	
-	r := setupRouter()
 	createTable()
+	r := setupRouter()
 	r.Run(":2019")
 }
 
